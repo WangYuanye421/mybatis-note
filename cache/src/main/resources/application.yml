@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+    type: com.mysql.cj.jdbc.MysqlDataSource
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password: root123
+    #password: wyyfztx@ever
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: application.yml
+
+logging:
+  level:
+    org.wyy.cache.mapper: trace
+
+mybatis:
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
+  mapper-locations: classpath:mapper/*.xml
